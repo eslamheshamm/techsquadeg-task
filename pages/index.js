@@ -35,7 +35,7 @@ export default function Home({ postsData }) {
 	);
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	const res = await fetch(`http://80.240.21.204:1337/news?limit=10`);
 	const postsData = await res.json();
 	return {

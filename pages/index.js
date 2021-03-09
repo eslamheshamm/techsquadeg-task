@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import Layout from "./components/layout";
+import React, { useState } from "react";
+import Layout from "../components/layout";
 import InfiniteScroll from "react-infinite-scroll-component";
+import PostsList from "../components/PostsList";
 
-import PostsList from "./components/PostsList";
 export default function Home({ postsData }) {
 	const [currentLength, setCurrentLength] = useState(postsData.news.length);
 	const [news, setNews] = useState(postsData.news);
